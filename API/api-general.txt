@@ -1,0 +1,40 @@
+What is a web service?
+Web = Internet 
+Service = API
+Web service = API that uses the internet
+So, all web services is an API but not all APIs are web service. Not all APIs use the internet.
+
+Web Services use:
+    * XML or JSON to format data over the internet
+    * REST, SOAP, or XML/RPC to transfer that data
+
+Stateless
+State = Current situation (in context)
+State HTTP = Web Request and Response
+Less = Without
+HTTP Stateless: Request unknown
+HTTP methods: REST and SOAP
+REST: Representational State Transfer
+SOAP: Simple Object Access Protocol
+Stateful: File Transfer Protocol (FTP)
+WSDL: Web Service Description Language
+
+REST: Representational State Transfer
+Methods: Get, Post, Put, Delete
+No rules (unlike SOAP)
+
+SAML is basically a session cookie in your browser that gives you access to webapps
+OAuth is a delegated authorization framework for REST/APIs. Allows a third party access. Limit access
+
+Authentication = proving your indentity
+Authorization = limited access
+
+Type of Apps: Native, Web and Hybrid
+
+Postman
+Basic Authentication: Access an API using username and password - not very secure
+Digest Authentication: A way of proving your in by using a digest - use HTTP - not used very often
+Bearer Token: holder can use to get access to an API
+OAuth API: delegated limited authorization to an application (app) - App uses access token
+
+Microservices: APIs - multi

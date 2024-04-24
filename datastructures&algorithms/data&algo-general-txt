@@ -1,0 +1,11 @@
+Big O notation is a way to describe the performance or complexity of an algorithm,
+specifically how the runtime of an algorithm grows with respect to the size of the input.
+Common Big O notations and their growth rates, ordered from fastest to slowest, are:
+
+O(1) - constant time complexity: the algorithm takes a constant amount of time, regardless of the input size
+O(log n) - logarithmic time complexity: the algorithm's runtime grows logarithmically with the input size
+O(n) - linear time complexity: the algorithm's runtime grows linearly with the input size
+O(n log n) - linearithmic time complexity: the algorithm's runtime grows at a rate between linear and logarithmic
+O(n^2) - quadratic time complexity: the algorithm's runtime grows quadratically with the input size
+O(2^n) - exponential time complexity: the algorithm's runtime grows exponentially with the input size
+-------------------------------------------------------------------------------------------------------------------

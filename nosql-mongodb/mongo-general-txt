@@ -1,0 +1,61 @@
+Four main categories of NoSQL db are: key-value, document-based, column, and graph
+-----------------------------------------------------------------------------------------
+The ACID(RDBMS) consistency model is a set of properties that guarantee reliable 
+and predictable transactions in a database system. 
+ACID stands for Atomicity, Consistency, Isolation, and Durability, 
+which are the four fundamental principles of the model.
+-----------------------------------------------------------------------------------------
+BASE(NoSQL) stands for Basically Available, Soft state, Eventually consistent, 
+and it is a set of principles for designing highly scalable and distributed systems. 
+The BASE model is an alternative to the ACID consistency model, which prioritizes 
+consistency and transactional integrity over scalability and availability.
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+
+https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/
+brew services start mongodb-community@6.0 
+brew services stop mongodb-community@6.0
+-----------------------------------------------------------------------------------------
+mongosh - connect to dbs
+-----------------------------------------------------------------------------------------
+Change to another port:
+mongo --port 27018
+-----------------------------------------------------------------------------------------
+show dbs 
+db - prints the current database
+show collections - of db
+use flights - create new db
+-----------------------------------------------------------------------------------------
+CRUD - Create, Read, Update and Delete.
+Here's a table summarizing the basic CRUD methods used in database operations:
+Operation	Method	    Description
+Create	    insertOne	Inserts a single document into a collection
+Create	    insertMany	Inserts multiple documents into a collection at once
+Read	    find	    Retrieves documents that match a specified query from a collection
+Read	    findOne	    Retrieves a single document that matches a specified query from a collection
+Update	    updateOne	Updates a single piece of data in a document that matches a specified filter in a collection
+Update	    updateMany	Updates multiple documents that match a specified filter in a collection
+Update      replaceOne  Replace a document interaly that matches a specified filter in a collection with a new document
+Delete	    deleteOne	Deletes a single document that matches a specified filter from a collection
+Delete	    deleteMany	Deletes multiple documents that match a specified filter from a collection
+-----------------------------------------------------------------------------------------
+db.flightData.updateOne({distance: 12000}, {$set: {marker: "delete"}})
+db.flightData.deleteOne({name: 'A T-Shirt'})
+db.flightData.updateMany({}, {$set: {marker: "delete"}})
+db.flightData.deleteMany({marker: 'delete'})
+-----------------------------------------------------------------------------------------
+db.passengerData.find().toArray() - find by it alone will not throw all the information you need as a toArray()
+db.passengerData.find().forEach((passengerData) => {printjson(passengerData)})
+db.passengerData.find({}, {name: 1}).pretty() - show all the names
+db.passengerData.find({}, {name: 1, _id: 0}).pretty() - show name without _id
+db.passengerData.updateOne({name: 'Albert Twostone'}, {$set: {hobbies: ["sports", "cooking"]}}) - add hobbies to all users
+db.passengerData.find({hobbies: "sports"}) - show all users with
+db.flightData.find({"status.details.responsible": "Eddy"}).pretty() -
+db.patientData.deleteMany({"patient.desease": 'cold'}) - remove all the patient that have cold
+-----------------------------------------------------------------------------------------
+db.dropDatabase() - to drop the db first choose the db use databaseName
+db.myCollection.drop() - Similarly, you could get rid of a single collection in a database
+***  Mongodb enforces no schemas  *** but that does not mean that you can't use some kind of schema
+-----------------------------------------------------------------------------------------
+db.companyData.insertOne({name: "Fresh Apples Inc", isStartup: true, employees: 33, funding: 1234568901234567890, details: {ceo: "Eddy Super", 
+tags: [{title: "super"}, {title: "perfect"}], foundingDate: new Date(), insertedAt: new Timestamp()}})

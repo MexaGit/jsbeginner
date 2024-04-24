@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.edd.gradle.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-01T02:28:09" hostname="MacBook-Pro-de-Eduardo.local" time="0.002">
+  <properties/>
+  <testcase name="appHasAGreeting" classname="com.edd.gradle.AppTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,24 @@
+git config --global user.email "eduardo.mexa@hotmail.com"
+git config --global user.name "River"     
+
+git init --recursive
+Initialized empty Git repository in /Users/eduardo.home/JSBeginner/course/src/react/.git/
+
+git remote add origin git@github.com:drSilence88/first-githbub-project.git // origin is the name, you can changed to test
+
+Check changes
+git status
+
+Save the all chances
+git add .
+
+Commit the chances
+git commit -m "initalized git repository"
+
+Submit the chances
+git push --set-upstream test master
+
+This three is to save the changes:
+git add .                          
+git commit -m "test-1"
+git push

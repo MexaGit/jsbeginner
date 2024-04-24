@@ -1,0 +1,22 @@
+Key Hashing is the process of determining the mapping of a key to a partitioned
+
+murmur3 algorithm??
+
+Common Deserializers:  
+String(incl. JSON), 
+Int, Float
+Avro, 
+Protobuf 
+
+Every Kafka broker is also called a "bootstrap server"
+
+Producers can choose to receive acknowledgment of data writes:
+acks=all : Leader + replicas acknowledgment(no data loss)
+
+If you use Brokers, you need to use Zookeeper:
+Zookeeper manages brokers (keep a list of them), send notifications of changes, etc.
+
+But never ever use Zookeeper as a configuration in your Kafka Clients 
+if you usea program and you are going to connect don't use Zookeper, only connect to Kafka
+
+Kafka now implementents the Raft protocol (XRaft) in order to replace Zookeeper

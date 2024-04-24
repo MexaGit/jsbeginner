@@ -1,0 +1,24 @@
+DevOps: es la union de personas, procesos y tecnologia, con el fin de proporcionar valor continuamente a los clientes
+
+Aspectos fundamentales
+Control de veriones: git
+Integration continua: jenkins - pipelines
+Entrega continua: Suministro de software rapido y confiable
+Infraestructura como codigo: Terraform
+Supervision y registro: Grafana
+Aprendizaje valido: Analisis de datos
+
+Desarrollo          Operaciones
+Gif flow            Docker
+Github              Kubernetes
+Microservicios      Prometheus
+Pruebas unitarias   Grafana
+
+Contenedores: Unidad de software que empaqueta el codigo y todas la dependencias necesarias de una aplicacion
+Imagenes: Paquete ligero y ejecutable de software con todo lo necesario para la aplicacion
+Docker Engine: Motor en ejecucion de Contenedores
+Docker Hub: Repositorio por defecto par las imagenes de docker
+Podman: Alternativa Opensource a Docker
+Docker Compose: Orquestador ligero de contenedores
+Docker Swarm: Orquestador de contenedores permite manejar un cluster
+Kubernetes: Sistema para las administracion de clusters y Orquestador Empresarial de Contenedores

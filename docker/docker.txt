@@ -1,0 +1,24 @@
+dockerhub: es un repositorio de imagenes (linux, postgres, oracleDB, java8, etc)
+docker engine: crear imagenes, crear contenedores y levantar aplicaciones
+docker-compose: definir servicios, es un orquestador de contenedores
+volumenes: sirve para mantener la informacion independiente si borras o no la imagen, haces un mapeo https://docs.docker.com/storage/volumes/
+
+A la izq, el puerto interno de nuestro host:        8080:****
+A la der, el puerto interno de nuestro contenedor:  ****:8080
+
+docker images ls // ver imagenes
+docker ps -a // ver contenedores creados
+docker run -p 80:80 -p 8080:8080 --name billinapp sotobotero/udemy-devops:0.0.1
+
+Ejecutar otro .yml que no contenga el nombre docker-compose:
+docker-compose -f stackdb.yml pull
+
+Para ejecutar las imagenes en su contenedor:
+docker-compose -f stackdb.yml up -d
+
+Billinapp creation:
+docker build -t billingapp:prod --no-cache --build-arg JAR_FILE=target/billing-0.0.1-SNAPSHOT.jar .
+
+
+
+

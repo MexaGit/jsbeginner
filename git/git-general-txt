@@ -1,0 +1,124 @@
+Git = version control system (VCS) - softwaret that tracks and manages changes to files over time 
+    * compare changes, revisit earlier versions of the files, compare verions, undo
+-----------------------------------------------------------------------------------------
+Git ≠ Github 
+-----------------------------------------------------------------------------------------
+Command(alt) + Shift + P = Shell Command: Install 'code' command in PATH
+-----------------------------------------------------------------------------------------
+Quick setup — if you’ve done this kind of thing before
+or	
+https://github.com/drSilence88/exercise-basic-github.git
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+
+…or create a new repository on the command line
+echo "# exercise-basic-github" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/drSilence88/exercise-basic-github.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/drSilence88/exercise-basic-github.git
+git branch -M main
+git push -u origin main
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Git:
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+git log --online = history 
+-----------------------------------------------------------------------------------------
+Add to the pass commit the file you forgot to add:
+git add <forgotfile>
+git commit --amend = change the last commit, just one before
+-----------------------------------------------------------------------------------------
+To ignore files:
+.gitignore
+-----------------------------------------------------------------------------------------
+git log or git log --oneline
+commit 7fa8828a56e4bc4791e716808e1891631ac42eca (HEAD -> main)
+(HEAD -> main) = A pointe that refers to the current location in your repository
+-----------------------------------------------------------------------------------------
+To create a new branch and switch to same time:
+git switch -c newbranchwithswitch-c 
+-----------------------------------------------------------------------------------------
+Delete branch 
+git branch -d or -D(forze) <branchname>
+-----------------------------------------------------------------------------------------
+Rename branch
+Switch to the branch to rename
+git branch -m <branchname>
+-----------------------------------------------------------------------------------------
+HEAD show us the branch we are
+cat .git/HEAD                                                                                                                                            ──(Fri,Mar17)─┘
+ref: refs/heads/new-branch-switch
+-----------------------------------------------------------------------------------------
+git switch main
+git merge <branchname>
+-----------------------------------------------------------------------------------------
+Getout an create a new branch
+git checkout -b <branchname>
+-----------------------------------------------------------------------------------------
+git diff - not staged changes 'on red'
+git diff --stages or cached - stages changes 'on green'
+git diff HEAD - stages and not stages changes
+git diff branch1 branch2 - compare branches
+git diff commit1 commit2 - compare commit 'use git log --oneline'
+-----------------------------------------------------------------------------------------
+git stash - save without having unecessary changes commited
+git stash pop - to bring again the changes to my working directory
+git stash apply - keep in there but aplied them
+git stash list - to view the changes that was stashed
+git stash apply stash@{number} - to choose with stash apply  
+git stash drop stash@{number} - to remove a expecific stash entry
+git stash clear - to remove all the stash entries
+-----------------------------------------------------------------------------------------
+IMPORTANT: all the files that you changed and NOT committed will be LOST!!!!
+git checkout <numbercommit> - go to the commit
+git switch <nameofbranch> - return to the last commit
+*******************
+To create branch with a old commit:
+git checkout <numbercommit> - choose a old commit that you need to start working on
+git switch -c <namenewbranch> - create another branch starting where you need start working on
+*******************
+git checkout HEAD~1 - return one commit before is the same as: git checkout <numbercommit> (you can execute this more than once or use HEAD~2, HEAD~3, HEAD~...)
+git switch - // this command will take you back wherever you were before
+*******************
+git checkout HEAD <filename> or git checkout -- <filename> or <multiplefilenames> - return to the last commit, before you change the file
+-----------------------------------------------------------------------------------------
+git restore <filename> - restore the file to the last commit HEAD is the same as: git checkout HEAD <filename>
+git restore --source HEAD~2 <filename> - restore to two commit before 
+git restore --staged <filename> - you can discard or ignore the file to the next commit or when is commited you can remove with this command
+-----------------------------------------------------------------------------------------
+git reset <commit-has> - will reset the repo back to a specific commit. The commits will be gone but not the last changes
+git reset --hard <commit-has> - will reset the repo back to a specific commit and associated changes
+-----------------------------------------------------------------------------------------
+git revert <commit-has> - preserve the last commit of the last changes but now creates another commit without those changes
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+GitHub:
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Copy to your keyboard:
+pbcopy < ~/.ssh/id_ed25519.pub 
+-----------------------------------------------------------------------------------------
+git remote -v - the URL of the origin of the code
+git remote add <namefortheURL> <URL> - you cam use origin for the namefortheURL (remote) 
+git remote rename <old> <new> - new name for the remote URL
+git remote remove <name> - remove remote URL
+-----------------------------------------------------------------------------------------
+git push <namefortheURL> <branch e.g:training-github-repo> - where is the destination and branch to push
+git push <namefortheURL> <branch> --force - ! [rejected] Updates were rejected because the remote contains work that you do not have locally
+git push <namefortheURL> <localnewbranch> - to add a new branch on GitHub
+git push <namefortheURL> <localbranch>:<otherGitHubBranch> - add in other branch of GitHub the current branch e.g: git push origin cats:main  
+git push -u <namefortheURL> <localbranch> -  -u(upstream) the local machine will remember the decision and will push directly the changes to <GitHubBranch> <localbranch>
+-----------------------------------------------------------------------------------------
+git branch -M <newname> - modified the main branch name
+To change de DEFAULT branch on GitHub go to: Settings -> Code and Automation -> Branches -> Defautl Branch
+git branch -r - remotes branchs
+-----------------------------------------------------------------------------------------
+git checkout --track <namefortheURL>/<localbranch>
+git switch <namefortheURL> <externalbranch> --- you can get the branch that is not exists locally

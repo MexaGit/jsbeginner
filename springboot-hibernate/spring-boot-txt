@@ -1,0 +1,24 @@
+START/STOP TOMCAT:
+brew services start tomcat
+brew services stop tomcat
+
+Data Access Layer
+JDBC Helper classes: Reduce your JDBC code by 50%
+ORM Object to Relational Mapping: INtegration with Hibernate and JPA
+Trassactions Add transcation support: Make heavy of AOP behind the scenes
+JMS Java Message Service: For sending async messages to a Message Broker
+
+Web Layer
+All Web related classes: Home of the Spring MVC framework - Servlet, WebSocket and Web
+
+Infrastructure
+Java agenst to remotely monitor your app with JMX (Java Management Extension) - AOP, Aspect, Instrumentation and Messasing
+
+Test Layer
+Supports Test-Driver-Development (TDD) Mock objects and out-of-container testing - Unit, Integration and Mock
+
+POM Project Object Model file Configuration file for your project - located in the root of your Maven project
+GAV: Group ID, Artifact ID and Version
+
+Maven:
+mvn clean compile test 

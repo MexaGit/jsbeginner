@@ -1,0 +1,65 @@
+Eliminar todos los contenedores detenidos
+	docker system prune -a --volumes
+
+Eliminar todas las imágenes
+	docker rmi $(docker images -a -q)
+
+Listar los volumenes
+	docker volume ls 
+
+Eliminar todos los volumenes
+	docker volume prune
+
+Construir las imagenes definidas en la orquestación
+	docker-compose -f stack-billing.yml build
+
+Inicializar los contenedores de los servicios de la orquestación
+	docker-compose -f stack-billing.yml up -d
+
+Detener todos los servicios de la orquestación
+	docker-compose -f stack-billing.yml stop
+
+Detener todos los contenedores
+	docker stop $(docker ps -a -q)
+
+Listar las redes virtuales
+	docker network ls
+
+Eliminar las redes virtuales
+	docker network prune
+
+reconstruir las imagenes
+	docker-compose -f stack-billing.yml build --no-cache
+
+reconstruir los contenedores de la orquestación
+	docker-compose -f stack-billing.yml up -d --force-recreate
+
+Escalar un servicio al iniciar la orquestación
+	docker-compose -f stack-billing.yml up --scale  billingapp-front=3 -d --force-recreate
+
+
+Revsiar consumo de recursos
+	docker stats
+
+Obtener informacion de docker
+	docker info
+
+Activar el cluster de swarm
+	docker swarm init
+
+Desplegar el stack en docker swarm
+	docker stack deploy -c stack-billing.yml billing
+
+Listar los servicio se docker swarm
+	docker service ls
+Eliminar la orquestacion o stack de docker swarm
+	docker stack rm billing
+
+Desactivar docker swarm
+	docker swarm leave --force
+
+Actualizar docker
+	brew install docker:lastest
+	brew install docker
+	brew install docker-compose
+	brew link --overwrite docker-compose

@@ -1,0 +1,52 @@
+/usr/local/bin/python3 -m pip install -U autopep8
+➜  course git:(edgarcia_TEST) ✗ /usr/local/bin/  pip install -U autopep8
+
+# use to add a comment of one line
+
+If you add \ in final line of the command you tell that the statement is not over .eg:
+2.0 + 5 * \
+4
+
+def = define function  
+
+procedence: not-and-or this mean that NOT it evaluated firs then AND and finally OR
+and not == != means that not is checkin before or first than AND 'or' OR so NOT means the opossite of TRUE or FALSE depending of the case
+
+5 is 8 is equal to 5 === 8 is False 
+5 is not 8 is equal 5 != 8 is True
+
+They computer reads read commands from the TOP to Bottom!
+
+def plus(parameter):
+plus(arguments)
+
+return can be used only once in a function!
+
+list_string = ['Edd', 'Ed', 'Eddy'] 
+you can access the list by indexing the value [0, 1, 2] = to the elements in the list ['Edd', 'Ed', 'Eddy']
+
+Tuples are a atype or data sequences
+Tuples they are inmutable: you can delete or add elements, use () not []
+The values a packed on Tuples
+
+Dictionaries represent another way of storing data = {}
+
+Iteration (lopps) is the ability to execute a certain code repeatedly
+
+OOP has class (bike) and the class as atributes as: color, zise, type; and methods such: turn_left, turn_right, slow_down, etc. 
+List (Class)
+Object(Instance) = ['Edd', 'Ed', 'Eddy']
+Atributes(Properties) = type of data: floats
+
+Search. List.extends()
+
+BigO = Is a measure of how a particular algorithm scales when you through more data at it, how much time take to do something, how much time or space it takes a computer with a particular algorithm.
+
+O(n) = for loop it executed only on time, linear time 
+O(n*2) = for loop that have another for loop nested, so the time that takes to process grow up rapidly
+O(n!) = n factorial, this is the worst scenario, loop of loops
+
+Tip to code: first write your code solution ideas, last step write the code solution
+
+CDI - Invertion control
+Maven - 
